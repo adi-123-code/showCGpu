@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Status Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            height: 90%;
+        }
+        .chart-container {
+            flex: 1 1 45%;
+            margin: 10px;
+            min-width: 300px;
+            height: 45%; /* 固定高度 */
+        }
+        canvas {
+            width: 100%;
+            height: 100%; /* 设置图表高度为容器高度 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Node Status Dashboard</h1>
+    <div class="container">
+        <div class="chart-container">
+            <h2>CPU Usage</h2>
+            <canvas id="cpuUsageChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Memory Usage</h2>
+            <canvas id="memoryUsageChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>GPU Usage</h2>
+            <canvas id="gpuUsageChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>GPU Memory Usage</h2>
+            <canvas id="gpuMemoryUsageChart"></canvas>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
