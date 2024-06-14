@@ -2,8 +2,8 @@ from flask import render_template, jsonify, request
 import requests
 from app import app
 
-node_addresses = ['http://localhost:5001','http://localhost:5002','http://localhost:5003']  # 子节点地址列表
-
+#node_addresses = ['http://localhost:5001','http://localhost:5002','http://localhost:5003']  # 子节点地址列表
+node_addresses = ['http://localhost:5001']  # 子节点地址列表
 @app.route('/')
 def index():
     return render_template('index.html')
